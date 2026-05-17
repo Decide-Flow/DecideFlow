@@ -1,0 +1,53 @@
+/* ===== GLASSMORPHISM & 3D EFFECTS ===== */
+/* Lightweight, performant, with fallbacks */
+
+/* Glass Effect Base */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* 3D Background Container */
+#three-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  /* Fallback if WebGL fails */
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+/* Only enable 3D on capable devices */
+@media (prefers-reduced-motion: reduce) {
+  #three-bg { display: none; }
+}
+
+/* Subtle floating animation for cards */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.card { animation: float 6s ease-in-out infinite; }
+.card:nth-child(2) { animation-delay: -2s; }
+.card:nth-child(3) { animation-delay: -4s; }
+
+/* Hover lift effect */
+.card:hover, .btn:hover {
+  transform: translateY(-4px) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smooth scroll behavior */
+html { scroll-behavior: smooth; }
+
+/* Performance: Disable heavy effects on mobile */
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .card { animation: none; }
+  #three-bg { display: none; }
+}
