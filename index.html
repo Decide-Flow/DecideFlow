@@ -1,249 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DecideFlow | Flow Through Decisions With Confidence</title>
-  <meta name="description" content="Make smarter decisions on software, AI tools, insurance & financial products. Unbiased comparisons, interactive calculators, data-driven recommendations."/>
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://decideflow.co/"/>
-  <meta property="og:title" content="DecideFlow | Flow Through Decisions With Confidence"/>
-  <meta property="og:description" content="Make smarter decisions on software, AI tools, insurance & financial products."/>
-  <meta property="og:image" content="https://decideflow.co/images/og-image.png"/>
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:url" content="https://decideflow.co/"/>
-  <meta name="twitter:title" content="DecideFlow | Flow Through Decisions With Confidence"/>
-  <meta name="twitter:description" content="Make smarter decisions on software, AI tools, insurance & financial products."/>
-  <meta name="twitter:image" content="https://decideflow.co/images/og-image.png"/>
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/main.css"/>
-  <link rel="stylesheet" href="/css/glassmorphism.css"/>
-  
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" src="/schemas/organization.jsonld"></script>
-  
-  <!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DecideFlow helps you choose the best software, AI tools, insurance, and financial products with unbiased comparisons, calculators, and data-driven recommendations.">
+    <meta name="keywords" content="software comparison, AI tools, insurance comparison, decision intelligence, DecideFlow">
+    <meta name="author" content="DecideFlow">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://decideflow.co/">
+    <meta property="og:title" content="DecideFlow – Flow through decisions with confidence">
+    <meta property="og:description" content="Unbiased comparisons, interactive calculators, and trusted recommendations for software, AI, insurance, and finance.">
+    <meta property="og:image" content="https://decideflow.co/images/og-image.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://decideflow.co/">
+    <meta name="twitter:title" content="DecideFlow – Flow through decisions with confidence">
+    <meta name="twitter:description" content="Unbiased comparisons, calculators, and data-driven picks for software, AI, insurance & finance.">
+    <meta name="twitter:image" content="https://decideflow.co/images/og-image.jpg">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://decideflow.co/">
+    <!-- Schema.org WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "DecideFlow",
+        "url": "https://decideflow.co/",
+        "description": "Unbiased comparisons, interactive calculators, and trusted recommendations for software, AI, insurance, and finance.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://decideflow.co/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <title>DecideFlow – Flow through decisions with confidence | Unbiased Software & Insurance Comparisons</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Three.js for 3D background -->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-  <!-- Skip to content for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- 3D Background Container (lazy loaded) -->
-  <div id="three-bg" aria-hidden="true"></div>
-  
-  <!-- Header -->
-  <header class="site-header glass">
-    <div class="container header-inner">
-      <a href="/" class="logo" aria-label="DecideFlow Home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 2L4 8V16C4 22.6274 9.37258 28 16 28C22.6274 28 28 22.6274 28 16V8L16 2Z" fill="url(#gradient)" stroke="#1e40af" stroke-width="1.5"/>
-          <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <defs>
-            <linearGradient id="gradient" x1="4" y1="2" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#1e40af"/><stop offset="1" stop-color="#06b6d4"/>
-            </linearGradient>
-          </defs>
-        </svg>
-        <span>DecideFlow</span>
-      </a>
-      
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="/#compare">Compare</a></li>
-          <li><a href="/#calculators">Calculators</a></li>
-          <li><a href="/#reviews">Reviews</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-      
-      <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-menu">☰</button>
-    </div>
-  </header>
-  
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu glass" hidden>
-    <ul>
-      <li><a href="/#compare">Compare Tools</a></li>
-      <li><a href="/#calculators">Calculators</a></li>
-      <li><a href="/#reviews">Reviews</a></li>
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div>
-  
-  <!-- Main Content -->
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-content">
-        <h1>Flow through decisions with confidence</h1>        <p class="hero-subtitle">Unbiased comparisons, interactive calculators, and data-driven recommendations for software, AI tools, insurance, and financial products.</p>
-        <div class="hero-ctas">
-          <a href="/#compare" class="btn btn-primary">Compare Tools</a>
-          <a href="/#calculators" class="btn btn-secondary">Try Calculators</a>
+    <!-- Skip to main content (accessibility) -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <!-- 3D Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Header / Navigation -->
+    <header class="site-header glass">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="DecideFlow Home">
+                <!-- Inline SVG Logo: abstract wave + checkmark -->
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 50 Q30 10 50 50 T90 50" stroke="url(#grad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+                    <path d="M35 55 L45 65 L65 40" stroke="#06b6d4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%">
+                            <stop offset="0%" stop-color="#1e40af"/>
+                            <stop offset="100%" stop-color="#06b6d4"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>DecideFlow</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="trust-badges">
-          <span>✓ Unbiased</span>
-          <span>✓ Data-Driven</span>
-          <span>✓ Free Forever</span>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero glass">
+            <div class="container">
+                <h1>Flow through decisions <span class="highlight">with confidence</span></h1>
+                <p class="hero-subtitle">Unbiased comparisons, smart calculators, and data‑driven picks for software, AI tools, insurance, and finance.</p>
+                <div class="hero-cta">
+                    <a href="#start-comparing" class="btn btn-primary">Start Comparing Now</a>
+                    <a href="/about.html" class="btn btn-secondary">How We Help</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Comparing Section (anchor) -->
+        <section id="start-comparing" class="comparison-preview glass">
+            <div class="container">
+                <h2>Popular Comparisons</h2>
+                <div class="card-grid">
+                    <!-- Card 1: CRM -->
+                    <div class="comparison-card">
+                        <h3>Salesforce vs HubSpot CRM</h3>
+                        <p>Which CRM fits your sales team? Compare features, pricing, and ROI.</p>
+                        <a href="/compare/salesforce-vs-hubspot/" class="btn btn-outline">Compare Now</a>
+                    </div>
+                    <!-- Card 2: AI -->
+                    <div class="comparison-card">
+                        <h3>ChatGPT vs Claude vs Gemini</h3>
+                        <p>See side‑by‑side performance, pricing, and use cases for top AI assistants.</p>
+                        <a href="/compare/chatgpt-vs-claude/" class="btn btn-outline">Compare Now</a>
+                    </div>
+                    <!-- Card 3: Insurance -->
+                    <div class="comparison-card">
+                        <h3>Term Life vs Whole Life Insurance</h3>
+                        <p>Understand the real cost difference with our interactive calculator.</p>
+                        <a href="/calculator/life-insurance-needs/" class="btn btn-outline">Calculate Now</a>
+                    </div>
+                </div>
+                <!-- AdSense Placeholder 1 (Below Hero) -->
+                <div class="ad-slot" aria-label="Advertisement">
+                    <span class="ad-label">Ad</span>
+                    <!-- AdSense code will be inserted here later -->
+                    <div class="ad-placeholder">Google AdSense — 728×90 Leaderboard</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Proposition Grid -->
+        <section class="features glass">
+            <div class="container">
+                <h2>Why DecideFlow?</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <h3>Data‑Driven Comparisons</h3>
+                        <p>Every recommendation is backed by real data, user reviews, and pricing research — never sponsored opinions.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🧮</div>
+                        <h3>Interactive Calculators</h3>
+                        <p>Instantly find your insurance coverage needs, mortgage affordability, or software ROI.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Transparent Rankings</h3>
+                        <p>“Best of” lists are based on weighted scoring — you see exactly how we score every product.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Capture / Newsletter -->
+        <section class="newsletter glass">
+            <div class="container">
+                <h2>Get smarter decisions in your inbox</h2>
+                <p>Join 500+ professionals receiving weekly tool comparisons and money‑saving insights.</p>
+                <form id="newsletter-form" class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" id="nl-email" placeholder="you@example.com" required>
+                    <button type="submit" class="btn btn-primary">Subscribe Free</button>
+                </form>
+                <div id="nl-message" class="form-message" role="status"></div>
+            </div>
+        </section>
+
+        <!-- Affiliate Disclosure Notice -->
+        <div class="disclosure-bar glass">
+            <div class="container">
+                <p>💡 We may earn a commission when you buy through links on our site. <a href="/affiliate-disclosure.html">Learn more</a>.</p>
+            </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- AdSense Slot (Below Header) -->
-    <div class="ad-slot" data-ad-slot="header-banner">
-      <!-- Google AdSense code will be inserted here after approval -->
-      <span class="ad-placeholder">Advertisement</span>
-    </div>
-    
-    <!-- Featured Comparisons -->
-    <section id="compare" class="section">
-      <div class="container">
-        <h2>Popular Comparisons</h2>
-        <div class="grid-3">
-          <article class="card glass">
-            <h3>CRM Software</h3>
-            <p>Salesforce vs HubSpot vs Zoho: Which CRM grows with your business?</p>
-            <a href="/compare/salesforce-vs-hubspot/" class="btn btn-small">Compare Now</a>
-          </article>
-          <article class="card glass">
-            <h3>AI Writing Tools</h3>
-            <p>ChatGPT vs Claude vs Gemini: Find your perfect AI writing partner.</p>
-            <a href="/compare/chatgpt-vs-claude/" class="btn btn-small">Compare Now</a>
-          </article>
-          <article class="card glass">
-            <h3>Cloud Platforms</h3>
-            <p>AWS vs Azure vs GCP: Cost calculator and feature breakdown.</p>
-            <a href="/compare/aws-vs-azure/" class="btn btn-small">Compare Now</a>
-          </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer glass">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>DecideFlow</h4>
+                <p>Flow through decisions with confidence.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Calculators Preview -->
-    <section id="calculators" class="section bg-light">
-      <div class="container">
-        <h2>Free Decision Calculators</h2>
-        <div class="grid-2">
-          <div class="calculator-card glass">
-            <h3>💰 Life Insurance Needs</h3>            <p>Calculate how much coverage your family truly needs.</p>
-            <button class="btn btn-secondary" onclick="openCalculator('life-insurance')">Open Calculator</button>
-          </div>
-          <div class="calculator-card glass">
-            <h3>🏠 Mortgage Affordability</h3>
-            <p>See what home price fits your budget and goals.</p>
-            <button class="btn btn-secondary" onclick="openCalculator('mortgage')">Open Calculator</button>
-          </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 DecideFlow. All rights reserved.</p>
         </div>
-      </div>
-    </section>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/three-scene.js"></script>
     
-    <!-- Lead Capture Form (Sidebar Style) -->
-    <aside class="lead-capture glass">
-      <div class="container">
-        <h3>Get Smarter Decision Insights</h3>
-        <p>Join 2,500+ professionals receiving our weekly decision intelligence newsletter.</p>
-        <form id="newsletter-form" class="newsletter-form">
-          <input type="email" name="email" placeholder="Your work email" required aria-label="Email address"/>
-          <button type="submit" class="btn btn-primary">Subscribe Free</button>
-        </form>
-        <p class="form-note">We respect your privacy. Unsubscribe anytime.</p>
-      </div>
-    </aside>
-    
-    <!-- Affiliate Disclosure Notice -->
-    <div class="disclosure-banner">
-      <p><strong>Transparency:</strong> We may earn a commission from purchases made through our links. This never affects our unbiased recommendations. <a href="/affiliate-disclosure">Learn more →</a></p>
-    </div>
-  </main>
-  
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="logo-footer">
-          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 2L4 8V16C4 22.6274 9.37258 28 16 28C22.6274 28 28 22.6274 28 16V8L16 2Z" fill="url(#grad2)" stroke="#1e40af" stroke-width="1.5"/>
-            <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-              <linearGradient id="grad2" x1="4" y1="2" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#1e40af"/><stop offset="1" stop-color="#06b6d4"/>
-              </linearGradient>
-            </defs>
-          </svg>
-          DecideFlow
-        </a>
-        <p>Flow through decisions with confidence.</p>
-      </div>
-      <div class="footer-links">        <h4>Explore</h4>
-        <ul>
-          <li><a href="/category/crm-software/">CRM Software</a></li>
-          <li><a href="/category/ai-tools/">AI Tools</a></li>
-          <li><a href="/category/insurance/">Insurance</a></li>
-          <li><a href="/best/ai-writing-tools/">Best AI Writers</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/#calculators">Calculators</a></li>
-          <li><a href="/sitemap">Sitemap</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-          <li><a href="/affiliate-disclosure">Affiliate Disclosure</a></li>
-          <li><a href="/disclaimer">Disclaimer</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> DecideFlow. All rights reserved. | <a href="/cookie-policy">Cookie Policy</a></p>
-    </div>
-  </footer>
-  
-  <!-- JavaScript Files -->
-  <script src="/js/main.js" defer></script>
-  <script src="/js/three-bg.js" defer></script>
-  <script src="/js/calculators.js" defer></script>
-  
-  <!-- Structured Data for Homepage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "DecideFlow",
-    "url": "https://decideflow.co",
-    "description": "Decision intelligence platform for software, AI tools, insurance, and financial products",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://decideflow.co/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }  }
-  </script>
+    <!-- Analytics placeholders (add your IDs later) -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        // Replace GA_MEASUREMENT_ID with your real ID when ready
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        // Replace with your Clarity project ID
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+    </script>
 </body>
 </html>
