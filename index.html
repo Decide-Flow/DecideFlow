@@ -2,118 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>DecideFlow – Flow Through Decisions With Confidence</title>
-    <meta name="description" content="Unbiased comparisons, interactive calculators, and data-driven recommendations for software, AI tools, insurance & financial products.">
-    <link rel="canonical" href="https://decideflow.pages.dev/">
-    <meta property="og:title" content="DecideFlow">
-    <meta property="og:description" content="Make smarter decisions with transparent comparisons and intelligent tools.">
-    <meta property="og:image" content="https://decideflow.pages.dev/favicon.ico">
-    <meta property="og:url" content="https://decideflow.pages.dev/">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecideFlow | Flow Through Decisions With Confidence</title>
+    <meta name="description" content="DecideFlow helps you make smarter decisions on software, AI tools, and insurance. Unbiased comparisons, calculators, and data-driven recommendations.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#061B4D">
+    
+    <meta property="og:title" content="DecideFlow | Make Smarter Decisions">
+    <meta property="og:description" content="Unbiased comparisons for AI, Software, and Finance.">
+    <meta property="og:type" content="website">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DecideFlow",
+      "url": "https://decideflow.pages.dev",
+      "logo": "https://decideflow.pages.dev/logo.png",
+      "slogan": "Flow Through Decisions With Confidence"
+    }
+    </script>
 </head>
 <body>
 
-    <!-- Navigation (same on all pages) -->
-    <nav class="glass-nav">
-        <div class="nav-container">
-            <a href="index.html" class="logo">DecideFlow</a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#comparisons">Compare</a></li>
-                <li><a href="#calculators">Calculators</a></li>
-            </ul>
+    <nav>
+        <a href="index.html" class="logo">
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 20 H50 C70 20 85 35 85 50 C85 65 70 80 50 80 H20 V20 Z" fill="#0A5CFF"/>
+                <path d="M40 45 L50 55 L70 35" stroke="#19D8FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Decide<span>Flow</span>
+        </a>
+        <div class="nav-links">
+            <a href="#software">Software</a>
+            <a href="#ai">AI Tools</a>
+            <a href="#finance">Insurance</a>
+            <a href="about.html">About</a>
         </div>
+        <a href="#start" class="btn-primary">Start Comparing</a>
     </nav>
 
-    <!-- 3D Canvas (background) -->
-    <canvas id="bgCanvas" class="three-canvas"></canvas>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Flow Through Decisions<br><span class="gradient-text">With Confidence</span></h1>
-            <p class="hero-subtitle">Unbiased comparisons • Interactive calculators • Data-driven recommendations</p>
-            <div class="hero-buttons">
-                <a href="#comparisons" class="btn btn-primary">Start Comparing →</a>
-                <a href="#calculators" class="btn btn-secondary">Try a Calculator</a>
-            </div>
+            <h1>Flow Through Decisions With Confidence</h1>
+            <p>Don't guess. Compare the world's best software, AI tools, and financial products using unbiased data, interactive calculators, and expert insights.</p>
+            <a href="#categories" class="btn-primary">Explore Categories</a>
         </div>
-    </section>
-
-    <!-- Features / Comparison Preview -->
-    <section id="comparisons" class="section">
-        <div class="container">
-            <h2 class="section-title">Popular Comparisons</h2>
-            <div class="card-grid">
-                <div class="glass-card">
-                    <h3>ChatGPT vs Claude</h3>
-                    <p>Which AI assistant gives the best answers for business? Pricing, features, and real tests.</p>
-                    <a href="#" class="card-link">Read Comparison →</a>
-                </div>
-                <div class="glass-card">
-                    <h3>Salesforce vs HubSpot</h3>
-                    <p>CRM showdown: enterprise power vs all‑in‑one growth. ROI calculator included.</p>
-                    <a href="#" class="card-link">Read Comparison →</a>
-                </div>
-                <div class="glass-card">
-                    <h3>Term Life vs Whole Life</h3>
-                    <p>Insurance decision tool: compare costs, cash value, and long‑term benefits.</p>
-                    <a href="#" class="card-link">Read Comparison →</a>
+        
+        <div class="hero-visuals">
+            <div class="floating-card card-1">
+                <h4 style="color: var(--primary-brand); margin-bottom: 10px;">ChatGPT vs Claude</h4>
+                <div style="height: 8px; background: #E2E8F0; border-radius: 4px; margin-bottom: 8px; width: 100%;"></div>
+                <div style="height: 8px; background: #E2E8F0; border-radius: 4px; width: 80%;"></div>
+            </div>
+            <div class="floating-card card-2">
+                <h4 style="color: var(--primary-brand); margin-bottom: 10px;">Insurance Calculator</h4>
+                <div style="display: flex; gap: 10px;">
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 4px solid var(--primary-accent);"></div>
+                    <div style="flex: 1;">
+                        <div style="height: 8px; background: #E2E8F0; border-radius: 4px; margin-top: 10px; margin-bottom: 8px;"></div>
+                        <div style="height: 8px; background: #E2E8F0; border-radius: 4px;"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Calculator Preview -->
-    <section id="calculators" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title">Interactive Calculators</h2>
-            <div class="card-grid">
-                <div class="glass-card">
-                    <h3>Life Insurance Need</h3>
-                    <p>How much coverage does your family really need? Answer 4 questions.</p>
-                    <a href="#" class="card-link">Calculate →</a>
-                </div>
-                <div class="glass-card">
-                    <h3>SaaS ROI Estimator</h3>
-                    <p>Will that new software pay for itself in 12 months? Know before you buy.</p>
-                    <a href="#" class="card-link">Calculate →</a>
-                </div>
+    <section id="categories" class="features">
+        <h2 style="text-align: center; color: var(--primary-dark); font-size: 2.5rem;">Intelligent Comparisons For</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Enterprise Software</h3>
+                <p>Find the perfect CRM, ERP, or marketing automation platform. Compare pricing, features, and true ROI.</p>
+            </div>
+            <div class="feature-card">
+                <h3>AI Tools & Productivity</h3>
+                <p>Navigate the AI revolution. Compare LLMs, image generators, and automation tools side-by-side.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Insurance & Finance</h3>
+                <p>Protect your future. Calculate your life, home, and auto insurance needs without the sales pressure.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer (same on all pages) -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <span class="footer-logo">DecideFlow</span>
-                <p>Flow Through Decisions With Confidence</p>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-links">
+                <h4 style="margin-bottom: 1rem; color: white;">DecideFlow</h4>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Flow through decisions with confidence.</p>
             </div>
             <div class="footer-links">
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
+                <h4 style="margin-bottom: 1rem; color: white;">Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
                 <a href="cookie.html">Cookie Policy</a>
-                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
-                <a href="disclaimer.html">Disclaimer</a>
+                <a href="affiliate.html">Affiliate Disclosure</a>
+            </div>
+            <div class="footer-links">
+                <h4 style="margin-bottom: 1rem; color: white;">Company</h4>
+                <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <div class="footer-copyright">
-                © 2025 DecideFlow. Comparisons are for informational purposes. We may earn commissions.
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DecideFlow. All rights reserved. Information provided is for educational purposes and does not constitute financial advice.</p>
         </div>
     </footer>
 
-    <script src="js/3d.js"></script>
-    <script src="js/script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
