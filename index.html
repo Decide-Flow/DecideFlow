@@ -1,222 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DecideFlow - Flow through decisions with confidence. Unbiased software comparisons, AI tool reviews, and insurance guides.">
-    <meta name="keywords" content="software comparison, AI tools, insurance guide, decision intelligence, product reviews">
-    
-    <!-- Page Title -->
-    <title>DecideFlow - Flow Through Decisions With Confidence</title>
-    
-    <!-- Open Graph Tags (Social Media Sharing) -->
-    <meta property="og:title" content="DecideFlow - Flow Through Decisions With Confidence">
-    <meta property="og:description" content="Unbiased software comparisons, AI tool reviews, and insurance guides to help you make smarter decisions.">
-    <meta property="og:image" content="https://decideflow.pages.dev/assets/images/og-image.png">
-    <meta property="og:url" content="https://decideflow.pages.dev">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DecideFlow – Flow Through Decisions With Confidence</title>
+    <meta name="description" content="Unbiased comparisons, interactive calculators, and data-driven recommendations for software, AI tools, insurance & financial products.">
+    <link rel="canonical" href="https://decideflow.pages.dev/">
+    <meta property="og:title" content="DecideFlow">
+    <meta property="og:description" content="Make smarter decisions with transparent comparisons and intelligent tools.">
+    <meta property="og:image" content="https://decideflow.pages.dev/favicon.ico">
+    <meta property="og:url" content="https://decideflow.pages.dev/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DecideFlow - Flow Through Decisions With Confidence">
-    <meta name="twitter:description" content="Unbiased software comparisons, AI tool reviews, and insurance guides.">
-    <meta name="twitter:image" content="https://decideflow.pages.dev/assets/images/og-image.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/images/logo-icon.png">
-    
-    <!-- Google Fonts - Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
-    
-    <!-- Schema.org Markup for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "DecideFlow",
-        "url": "https://decideflow.pages.dev",
-        "logo": "https://decideflow.pages.dev/assets/images/logo-full.png",
-        "description": "Decision intelligence platform for software, AI tools, and insurance comparisons",
-        "sameAs": []
-    }
-    </script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
 </head>
-<body>    <!-- Navigation Header -->
-    <header class="header">
-        <nav class="nav container">
-            <a href="/" class="nav-logo">
-                <span class="logo-text">DecideFlow</span>
-            </a>
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link active">Home</a></li>
-                <li><a href="/about.html" class="nav-link">About</a></li>
-                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+<body>
+
+    <!-- Navigation (same on all pages) -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">DecideFlow</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#comparisons">Compare</a></li>
+                <li><a href="#calculators">Calculators</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <!-- Hero Section with 3D CSS Effects -->
+    <!-- 3D Canvas (background) -->
+    <canvas id="bgCanvas" class="three-canvas"></canvas>
+
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="gradient-sphere sphere-1"></div>
-            <div class="gradient-sphere sphere-2"></div>
-        </div>
-        
-        <div class="container hero-content">
-            <h1 class="hero-title">
-                Flow Through <span class="gradient-text">Decisions</span> With Confidence
-            </h1>
-            <p class="hero-subtitle">
-                Your trusted decision intelligence platform for software comparisons, AI tools, and insurance guides. 
-                Make smarter choices with data-driven insights.
-            </p>
-            <div class="hero-cta">
-                <a href="#categories" class="btn btn-primary">Explore Categories</a>
-                <a href="/about.html" class="btn btn-secondary">Learn More</a>
+        <div class="hero-content">
+            <h1 class="hero-title">Flow Through Decisions<br><span class="gradient-text">With Confidence</span></h1>
+            <p class="hero-subtitle">Unbiased comparisons • Interactive calculators • Data-driven recommendations</p>
+            <div class="hero-buttons">
+                <a href="#comparisons" class="btn btn-primary">Start Comparing →</a>
+                <a href="#calculators" class="btn btn-secondary">Try a Calculator</a>
             </div>
         </div>
     </section>
 
-    <!-- Main Categories Section -->
-    <section id="categories" class="categories section">
+    <!-- Features / Comparison Preview -->
+    <section id="comparisons" class="section">
         <div class="container">
-            <h2 class="section-title">What Would You Like to Compare?</h2>
-            <p class="section-subtitle">Choose from our three core verticals</p>
-            
-            <div class="category-grid">
-                <!-- Category Card 1: Enterprise Software -->
-                <div class="category-card glass-card">
-                    <div class="card-icon">💼</div>
-                    <h3>Enterprise Software & Cloud</h3>
-                    <p>CRM, cloud infrastructure, project management, cybersecurity, and business tools.</p>
-                    <ul class="category-list">
-                        <li>✓ CRM Software Comparisons</li>                        <li>✓ Cloud Platform Guides</li>
-                        <li>✓ Project Management Tools</li>
-                        <li>✓ ROI Calculators</li>
-                    </ul>
-                    <a href="/category/enterprise-software.html" class="btn btn-outline">Explore Software</a>
+            <h2 class="section-title">Popular Comparisons</h2>
+            <div class="card-grid">
+                <div class="glass-card">
+                    <h3>ChatGPT vs Claude</h3>
+                    <p>Which AI assistant gives the best answers for business? Pricing, features, and real tests.</p>
+                    <a href="#" class="card-link">Read Comparison →</a>
                 </div>
-
-                <!-- Category Card 2: AI Tools -->
-                <div class="category-card glass-card featured">
-                    <div class="card-badge">Popular</div>
-                    <div class="card-icon">🤖</div>
-                    <h3>AI Tools & Productivity</h3>
-                    <p>AI writing assistants, coding tools, video creation, and productivity platforms.</p>
-                    <ul class="category-list">
-                        <li>✓ AI Writing Tool Comparisons</li>
-                        <li>✓ Coding Assistant Reviews</li>
-                        <li>✓ SEO Tool Analysis</li>
-                        <li>✓ Cost Calculators</li>
-                    </ul>
-                    <a href="/category/ai-tools.html" class="btn btn-primary">Explore AI Tools</a>
+                <div class="glass-card">
+                    <h3>Salesforce vs HubSpot</h3>
+                    <p>CRM showdown: enterprise power vs all‑in‑one growth. ROI calculator included.</p>
+                    <a href="#" class="card-link">Read Comparison →</a>
                 </div>
-
-                <!-- Category Card 3: Insurance -->
-                <div class="category-card glass-card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Insurance & Financial Products</h3>
-                    <p>Life insurance, home insurance, auto insurance, and financial planning tools.</p>
-                    <ul class="category-list">
-                        <li>✓ Insurance Needs Calculator</li>
-                        <li>✓ Coverage Comparisons</li>
-                        <li>✓ Mortgage Affordability</li>
-                        <li>✓ Retirement Planning</li>
-                    </ul>
-                    <a href="/category/insurance.html" class="btn btn-outline">Explore Insurance</a>
+                <div class="glass-card">
+                    <h3>Term Life vs Whole Life</h3>
+                    <p>Insurance decision tool: compare costs, cash value, and long‑term benefits.</p>
+                    <a href="#" class="card-link">Read Comparison →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-us section">
+    <!-- Calculator Preview -->
+    <section id="calculators" class="section alt-bg">
         <div class="container">
-            <h2 class="section-title">Why Trust DecideFlow?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">📊</div>
-                    <h4>Data-Driven Analysis</h4>
-                    <p>Every comparison backed by real data, pricing, and user feedback.</p>
+            <h2 class="section-title">Interactive Calculators</h2>
+            <div class="card-grid">
+                <div class="glass-card">
+                    <h3>Life Insurance Need</h3>
+                    <p>How much coverage does your family really need? Answer 4 questions.</p>
+                    <a href="#" class="card-link">Calculate →</a>
                 </div>
-                <div class="feature-item">                    <div class="feature-icon">⚖️</div>
-                    <h4>Completely Unbiased</h4>
-                    <p>We show pros and cons honestly. No hidden agendas.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎯</div>
-                    <h4>Actionable Insights</h4>
-                    <p>Clear recommendations tailored to your specific needs.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔒</div>
-                    <h4>Transparent & Trustworthy</h4>
-                    <p>Full disclosure of affiliate relationships. Your trust matters.</p>
+                <div class="glass-card">
+                    <h3>SaaS ROI Estimator</h3>
+                    <p>Will that new software pay for itself in 12 months? Know before you buy.</p>
+                    <a href="#" class="card-link">Calculate →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Signup Section -->
-    <section class="newsletter section">
-        <div class="container">
-            <div class="newsletter-card glass-card">
-                <h2>Stay Ahead of the Curve</h2>
-                <p>Get weekly insights on the latest software, AI tools, and decision-making strategies.</p>
-                <form id="newsletter-form" class="newsletter-form">
-                    <input type="email" id="newsletter-email" placeholder="Enter your email" required class="form-input">
-                    <button type="submit" class="btn btn-primary">Subscribe Free</button>
-                </form>
-                <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer (same on all pages) -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>DecideFlow</h3>
-                    <p>Flow through decisions with confidence. Your trusted decision intelligence platform.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/about.html">About Us</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                        <li><a href="/sitemap.html">Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>More</h4>
-                    <ul>
-                        <li><a href="/cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="/disclaimer.html">Disclaimer</a></li>
-                    </ul>
-                </div>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">DecideFlow</span>
+                <p>Flow Through Decisions With Confidence</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 DecideFlow. All rights reserved.</p>
-                <p>Made with ❤️ for better decisions.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="cookie.html">Cookie Policy</a>
+                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 DecideFlow. Comparisons are for informational purposes. We may earn commissions.
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="/js/main.js"></script>
+    <script src="js/3d.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
