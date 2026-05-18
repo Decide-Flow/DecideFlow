@@ -1,0 +1,229 @@
+/* =========================================
+   DECIDEFLOW - MASTER CSS
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    --primary-dark: #061B4D;
+    --primary-brand: #0A5CFF;
+    --primary-accent: #19D8FF;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8FAFC;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --glass-bg: rgba(255, 255, 255, 0.72);
+    --glass-border: rgba(10, 92, 255, 0.08);
+    --shadow-3d: 0 20px 40px rgba(6, 27, 77, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION (GLASSMORPHISM) --- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: var(--primary-brand);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-brand);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary-brand), var(--primary-accent));
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(10, 92, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(25, 216, 255, 0.4);
+}
+
+/* --- HERO SECTION (3D DEPTH) --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 5% 2rem;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-brand));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* 3D Floating Elements */
+.hero-visuals {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+}
+
+.floating-card {
+    position: absolute;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-3d);
+    animation: float 6s ease-in-out infinite;
+}
+
+.card-1 { top: 10%; right: 20%; width: 250px; animation-delay: 0s; }
+.card-2 { bottom: 20%; left: 10%; width: 300px; animation-delay: -3s; }
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* --- CARDS & FEATURES --- */
+.features {
+    padding: 5rem 5%;
+    background: var(--bg-primary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--bg-primary);
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-3d);
+    border-color: var(--primary-brand);
+}
+
+.feature-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--primary-dark);
+    color: white;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.75);
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Add hamburger menu in JS later */
+    .hero { flex-direction: column; text-align: center; padding-top: 8rem; }
+    .hero-content { margin: 0 auto; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero-visuals { display: none; } /* Hide 3D cards on small mobile for performance */
+}
+
