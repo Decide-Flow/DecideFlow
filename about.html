@@ -1,31 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About DecideFlow – Our Mission</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — DecideFlow</title>
+  <meta name="description" content="Learn how DecideFlow helps you make smarter software and insurance decisions with unbiased data.">
+  <link rel="canonical" href="https://decideflow.pages.dev/about.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230A5CFF'/><circle cx='50' cy='50' r='35' fill='none' stroke='%2319D8FF' stroke-width='6'/></svg>">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <style>
+    /* Same base styles as index.html - compressed */
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#061B4D;color:#0F172A;overflow-x:hidden;line-height:1.5}#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}.content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 20px}.glass{background:rgba(255,255,255,0.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.3);border-radius:24px;box-shadow:0 25px 45px rgba(6,27,77,0.15)}.glass-nav{background:rgba(255,255,255,0.78);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(226,232,240,0.7);border-radius:0 0 32px 32px}header{position:sticky;top:0;z-index:10;padding:10px 0}.nav-container{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px}.logo{font-weight:800;font-size:1.8rem;color:#061B4D;text-decoration:none}.nav-links{display:flex;gap:24px;align-items:center}.nav-links a{color:#0F172A;text-decoration:none;font-weight:500}.menu-toggle{display:none;background:none;border:none;font-size:1.8rem;color:#0F172A}@media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:70px;right:20px;background:rgba(255,255,255,0.95);backdrop-filter:blur(30px);border-radius:24px;padding:20px;box-shadow:0 20px 40px rgba(0,0,0,0.1);width:200px}.nav-links.active{display:flex}.menu-toggle{display:block}}footer{background:#061B4D;color:rgba(255,255,255,0.75);padding:60px 0 30px;margin-top:80px;z-index:2;position:relative}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:40px;max-width:1200px;margin:0 auto;padding:0 20px}footer a{color:#19D8FF;text-decoration:none}.footer-bottom{text-align:center;padding-top:30px;border-top:1px solid rgba(255,255,255,0.1);margin-top:40px}.page-title{font-size:2.5rem;font-weight:800;margin:60px 0 30px;background:linear-gradient(135deg,#0A5CFF,#19D8FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-card{padding:40px;margin-bottom:40px;color:#0F172A}
+  </style>
 </head>
 <body>
-    <nav class="glass-nav">...same as index.html...</nav>
-    <canvas id="bgCanvas" class="three-canvas"></canvas>
-    <main class="content-page">
-        <div class="container">
-            <h1>About DecideFlow</h1>
-            <p>DecideFlow was born from a simple frustration: making important decisions (software, insurance, finance) is overwhelming. Too many options, biased reviews, hidden costs.</p>
-            <p>We built DecideFlow to be the <strong>trusted decision intelligence platform</strong>. Our team of analysts and AI tools compare hundreds of data points so you can confidently choose the best product for your needs.</p>
-            <h2>Our Principles</h2>
-            <ul>
-                <li><strong>Unbiased:</strong> We earn from ads and affiliate links, but never from a product's placement. Every comparison is fact‑based.</li>
-                <li><strong>Transparent:</strong> Our calculators show exactly how we compute results. No black boxes.</li>
-                <li><strong>Actionable:</strong> You leave with a clear winner and a next step.</li>
-            </ul>
-            <p>Based in India, serving the world. Questions? <a href="contact.html">Contact us</a>.</p>
-        </div>
-    </main>
-    <footer class="footer">...same as index.html...</footer>
-    <script src="js/3d.js"></script>
-    <script src="js/script.js"></script>
+  <canvas id="bg-canvas"></canvas>
+  <header class="glass-nav">
+    <div class="nav-container">
+      <a href="/" class="logo">Decide<span style="color:#0A5CFF;">Flow</span></a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="content">
+    <h1 class="page-title">About DecideFlow</h1>
+    <div class="glass text-card">
+      <p>DecideFlow was born from a simple frustration: choosing the right software, AI tool, or insurance policy shouldn't feel like gambling. We combine transparent data, real user feedback, and smart calculators to give you decision superpowers.</p>
+      <p style="margin-top:20px;">We are a team of data scientists, SaaS veterans, and licensed insurance advisors committed to unbiased, up‑to‑date recommendations. Our platform never takes money to influence rankings – our revenue comes from ads, affiliate links (clearly disclosed), and premium business tools.</p>
+      <p style="margin-top:20px;">Every day we help thousands of business owners, freelancers, and families make confident choices. Flow through decisions with confidence.</p>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-grid">
+      <div><h3 style="color:#fff;margin-bottom:12px">DecideFlow</h3><p style="font-size:0.9rem">Your decision intelligence platform.</p></div>
+      <div><h4 style="color:#fff;margin-bottom:12px">Legal</h4>
+        <a href="/privacy-policy.html">Privacy Policy</a><br>
+        <a href="/terms-of-service.html">Terms</a><br>
+        <a href="/cookie-policy.html">Cookie Policy</a><br>
+        <a href="/affiliate-disclosure.html">Affiliate Disclosure</a><br>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+      <div><h4 style="color:#fff;margin-bottom:12px">Contact</h4><a href="mailto:help.decideflow@zohomail.in">help.decideflow@zohomail.in</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 DecideFlow. All rights reserved.</p></div>
+  </footer>
+
+  <!-- 3D Background Script (same as homepage) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    (function() {
+      const canvas = document.getElementById('bg-canvas');
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setClearColor(0x061B4D, 1);
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000);
+      camera.position.z = 30;
+      scene.add(new THREE.AmbientLight(0x0A5CFF, 0.5));
+      const dirLight = new THREE.DirectionalLight(0x19D8FF, 0.8);
+      dirLight.position.set(10,10,10); scene.add(dirLight);
+      const pGeo = new THREE.BufferGeometry(); const pCount=300; const pos=new Float32Array(pCount*3); const col=new Float32Array(pCount*3);
+      for(let i=0;i<pCount*3;i+=3){pos[i]=(Math.random()-0.5)*50;pos[i+1]=(Math.random()-0.5)*30;pos[i+2]=(Math.random()-0.5)*20;col[i]=0.2+Math.random()*0.2;col[i+1]=0.4+Math.random()*0.4;col[i+2]=0.8+Math.random()*0.2}
+      pGeo.setAttribute('position',new THREE.BufferAttribute(pos,3));pGeo.setAttribute('color',new THREE.BufferAttribute(col,3));
+      const pMat=new THREE.PointsMaterial({size:0.15,vertexColors:true,blending:THREE.AdditiveBlending,depthWrite:false});
+      const particles=new THREE.Points(pGeo,pMat);scene.add(particles);
+      const linePos=[];for(let i=0;i<pCount;i++){const j=(i+1)%pCount;linePos.push(pos[i*3],pos[i*3+1],pos[i*3+2],pos[j*3],pos[j*3+1],pos[j*3+2])}
+      const lGeo=new THREE.BufferGeometry();lGeo.setAttribute('position',new THREE.BufferAttribute(new Float32Array(linePos),3));
+      const lines=new THREE.LineSegments(lGeo,new THREE.LineBasicMaterial({color:0x19D8FF,opacity:0.2,transparent:true}));scene.add(lines);
+      const orb=new THREE.Mesh(new THREE.SphereGeometry(2.2,32,32),new THREE.MeshStandardMaterial({color:0x0A5CFF,emissive:0x19D8FF,roughness:0.2,metalness:0.1,transparent:true,opacity:0.7}));
+      orb.position.set(0,0,-3);scene.add(orb);
+      const ring1=new THREE.Mesh(new THREE.TorusGeometry(4,0.1,16,100),new THREE.MeshStandardMaterial({color:0x7EF9FF,emissive:0x19D8FF,roughness:0.3,transparent:true,opacity:0.5}));
+      ring1.rotation.x=Math.PI/2;ring1.position.set(2,1,-5);scene.add(ring1);
+      const ring2=new THREE.Mesh(new THREE.TorusGeometry(4,0.1,16,100),new THREE.MeshStandardMaterial({color:0x7EF9FF,emissive:0x19D8FF,roughness:0.3,transparent:true,opacity:0.5}));
+      ring2.rotation.z=Math.PI/3;ring2.position.set(-3,-1,-6);scene.add(ring2);
+      function animate(){requestAnimationFrame(animate);particles.rotation.y+=0.0002;particles.rotation.x+=0.0001;orb.rotation.y+=0.005;orb.rotation.x+=0.002;ring1.rotation.z+=0.003;ring1.rotation.y+=0.002;ring2.rotation.x+=0.004;ring2.rotation.z+=0.003;camera.position.x=Math.sin(Date.now()*0.0001)*1.5;camera.position.y=Math.cos(Date.now()*0.00015)*1;camera.lookAt(0,0,-2);renderer.render(scene,camera)}animate();
+      window.addEventListener('resize',()=>{camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight)});
+      document.getElementById('menuToggle')?.addEventListener('click',()=>document.getElementById('navLinks')?.classList.toggle('active'));
+    })();
+  </script>
 </body>
 </html>
