@@ -1,116 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DecideFlow | Flow Through Decisions With Confidence</title>
-    <meta name="description" content="DecideFlow helps you make smarter decisions on software, AI tools, and insurance. Unbiased comparisons, calculators, and data-driven recommendations.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#061B4D">
-    
-    <meta property="og:title" content="DecideFlow | Make Smarter Decisions">
-    <meta property="og:description" content="Unbiased comparisons for AI, Software, and Finance.">
-    <meta property="og:type" content="website">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "DecideFlow",
-      "url": "https://decideflow.pages.dev",
-      "logo": "https://decideflow.pages.dev/logo.png",
-      "slogan": "Flow Through Decisions With Confidence"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DecideFlow – Flow Through Decisions With Confidence</title>
+  <meta name="description" content="Make smarter decisions about software, AI tools, insurance, and financial products with transparent comparisons, interactive calculators, and data-driven recommendations.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="DecideFlow – Flow Through Decisions With Confidence">
+  <meta property="og:description" content="Unbiased comparisons, calculators, and reviews for software, AI, insurance & finance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://decideflow.pages.dev">
+  <meta property="og:image" content="https://decideflow.pages.dev/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DecideFlow">
+  <meta name="twitter:description" content="Flow Through Decisions With Confidence">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://decideflow.pages.dev">
+  <!-- Preload & CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DecideFlow",
+    "url": "https://decideflow.pages.dev",
+    "logo": "https://decideflow.pages.dev/icon-192.png",
+    "description": "Decision intelligence platform for software, AI, insurance, and financial products."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DecideFlow",
+    "url": "https://decideflow.pages.dev",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://decideflow.pages.dev/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
-    </script>
+  }
+  </script>
 </head>
 <body>
+  <canvas id="bg-canvas"></canvas>
 
-    <nav>
-        <a href="index.html" class="logo">
-            <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 20 H50 C70 20 85 35 85 50 C85 65 70 80 50 80 H20 V20 Z" fill="#0A5CFF"/>
-                <path d="M40 45 L50 55 L70 35" stroke="#19D8FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Decide<span>Flow</span>
-        </a>
-        <div class="nav-links">
-            <a href="#software">Software</a>
-            <a href="#ai">AI Tools</a>
-            <a href="#finance">Insurance</a>
-            <a href="about.html">About</a>
-        </div>
-        <a href="#start" class="btn-primary">Start Comparing</a>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="/" class="logo">DecideFlow</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Flow Through Decisions With Confidence</h1>
-            <p>Don't guess. Compare the world's best software, AI tools, and financial products using unbiased data, interactive calculators, and expert insights.</p>
-            <a href="#categories" class="btn-primary">Explore Categories</a>
-        </div>
-        
-        <div class="hero-visuals">
-            <div class="floating-card card-1">
-                <h4 style="color: var(--primary-brand); margin-bottom: 10px;">ChatGPT vs Claude</h4>
-                <div style="height: 8px; background: #E2E8F0; border-radius: 4px; margin-bottom: 8px; width: 100%;"></div>
-                <div style="height: 8px; background: #E2E8F0; border-radius: 4px; width: 80%;"></div>
-            </div>
-            <div class="floating-card card-2">
-                <h4 style="color: var(--primary-brand); margin-bottom: 10px;">Insurance Calculator</h4>
-                <div style="display: flex; gap: 10px;">
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 4px solid var(--primary-accent);"></div>
-                    <div style="flex: 1;">
-                        <div style="height: 8px; background: #E2E8F0; border-radius: 4px; margin-top: 10px; margin-bottom: 8px;"></div>
-                        <div style="height: 8px; background: #E2E8F0; border-radius: 4px;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Overlay content -->
+  <div class="content-overlay">
+    <!-- Hero Section -->
+    <section style="margin-top: 5rem;">
+      <h1>Flow Through Decisions<br>With Confidence</h1>
+      <p style="font-size: 1.2rem; margin: 1.5rem 0;">Stop guessing. Compare software, AI tools, insurance & financial products using transparent data and smart calculators.</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+        <a href="#comparisons" class="btn btn-primary">Start Comparing</a>
+        <a href="about.html" class="btn btn-secondary">How It Works</a>
+      </div>
     </section>
 
-    <section id="categories" class="features">
-        <h2 style="text-align: center; color: var(--primary-dark); font-size: 2.5rem;">Intelligent Comparisons For</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Enterprise Software</h3>
-                <p>Find the perfect CRM, ERP, or marketing automation platform. Compare pricing, features, and true ROI.</p>
-            </div>
-            <div class="feature-card">
-                <h3>AI Tools & Productivity</h3>
-                <p>Navigate the AI revolution. Compare LLMs, image generators, and automation tools side-by-side.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Insurance & Finance</h3>
-                <p>Protect your future. Calculate your life, home, and auto insurance needs without the sales pressure.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Feature cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 4rem;">
+      <div class="glass-card">
+        <h3>🔍 Unbiased Comparisons</h3>
+        <p>Side-by-side analysis of features, pricing, and performance. No sponsor bias.</p>
+        <a href="#" style="color: var(--blue);">Explore comparisons →</a>
+      </div>
+      <div class="glass-card">
+        <h3>🧮 Smart Calculators</h3>
+        <p>Calculate insurance needs, software ROI, and more in seconds.</p>
+        <a href="#" style="color: var(--blue);">Try a calculator →</a>
+      </div>
+      <div class="glass-card">
+        <h3>⭐ Expert Reviews</h3>
+        <p>In-depth, honest reviews written by domain experts.</p>
+        <a href="#" style="color: var(--blue);">Read reviews →</a>
+      </div>
+    </div>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-links">
-                <h4 style="margin-bottom: 1rem; color: white;">DecideFlow</h4>
-                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Flow through decisions with confidence.</p>
-            </div>
-            <div class="footer-links">
-                <h4 style="margin-bottom: 1rem; color: white;">Legal</h4>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="cookie.html">Cookie Policy</a>
-                <a href="affiliate.html">Affiliate Disclosure</a>
-            </div>
-            <div class="footer-links">
-                <h4 style="margin-bottom: 1rem; color: white;">Company</h4>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 DecideFlow. All rights reserved. Information provided is for educational purposes and does not constitute financial advice.</p>
-        </div>
-    </footer>
+    <!-- CTA for lead gen -->
+    <div class="glass-card" style="margin-top: 4rem; text-align: center;">
+      <h2>Find the Best Insurance in Minutes</h2>
+      <p>Get personalized quotes from top providers. Free, no obligation.</p>
+      <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Get Quotes Now</a>
+    </div>
+  </div>
 
-    <script src="main.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>DecideFlow</h4>
+        <p>Decision intelligence for modern life.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <p><a href="about.html">About</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p><a href="terms-of-service.html">Terms of Service</a></p>
+        <p><a href="cookie-policy.html">Cookie Policy</a></p>
+        <p><a href="disclaimer.html">Disclaimer</a></p>
+        <p><a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 DecideFlow. All rights reserved. Flow Through Decisions With Confidence.</p>
+    </div>
+  </footer>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="three-scene.js"></script>
 </body>
 </html>
