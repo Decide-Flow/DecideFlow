@@ -1,361 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>DecideFlow — Flow Through Decisions With Confidence</title>
-  <meta name="description" content="DecideFlow helps you choose the best software, AI tools, insurance & financial products with unbiased comparisons, interactive calculators, and data‑driven recommendations.">
-  <link rel="canonical" href="https://decideflow.pages.dev/">
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://decideflow.pages.dev/">
-  <meta property="og:title" content="DecideFlow — Flow Through Decisions With Confidence">
-  <meta property="og:description" content="Unbiased software & insurance comparisons. Data‑backed calculators. Your decision intelligence platform.">
-  <meta property="og:image" content="https://decideflow.pages.dev/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DecideFlow — Flow Through Decisions With Confidence">
-  <meta name="twitter:description" content="Unbiased software & insurance comparisons. Data‑backed calculators.">
-  
-  <!-- Favicon (base64 blue circle) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230A5CFF'/><circle cx='50' cy='50' r='35' fill='none' stroke='%2319D8FF' stroke-width='6'/></svg>">
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "DecideFlow",
-    "url": "https://decideflow.pages.dev",
-    "logo": "https://decideflow.pages.dev/icon-512.png",
-    "description": "Decision intelligence platform comparing software, AI tools, insurance, and financial products.",
-    "sameAs": []
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "DecideFlow",
-    "url": "https://decideflow.pages.dev"
-  }
-  </script>
-
-  <!-- Google Analytics placeholder (replace G-XXXXXXXXXX with your ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <style>
-    /* ---------- RESET & BASE ---------- */
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #061B4D;
-      color: #0F172A;
-      overflow-x: hidden;
-      line-height: 1.5;
-      -webkit-tap-highlight-color: transparent;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DecideFlow - Flow Through Decisions With Confidence. Compare software, AI tools, insurance & financial products with data-driven recommendations.">
+    <meta name="keywords" content="decision intelligence, software comparison, AI tools, insurance comparison, financial products">
+    <meta name="author" content="DecideFlow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="DecideFlow - Flow Through Decisions With Confidence">
+    <meta property="og:description" content="Make smarter decisions with unbiased comparisons, interactive calculators & data-driven recommendations">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://decideflow.pages.dev">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DecideFlow - Decision Intelligence Platform">
+    <meta name="twitter:description" content="Compare software, AI tools & financial products with confidence">
+    
+    <title>DecideFlow - Flow Through Decisions With Confidence</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "DecideFlow",
+        "url": "https://decideflow.pages.dev",
+        "logo": "https://decideflow.pages.dev/assets/logo.svg",
+        "description": "Decision intelligence platform for software, AI tools, insurance & financial products",
+        "sameAs": [],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "help.decideflow@zohomail.in",
+            "contactType": "customer service"
+        }
     }
-    /* 3D canvas sits behind everything */
-    #bg-canvas {
-      position: fixed;
-      top: 0; left: 0; width:100%; height:100%;
-      z-index: 0;
-      pointer-events: none; /* allow clicks through */
+    </script>    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "DecideFlow",
+        "url": "https://decideflow.pages.dev",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://decideflow.pages.dev/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
     }
-    /* Content overlay */
-    .content {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    /* ---------- GLASS COMPONENTS ---------- */
-    .glass {
-      background: rgba(255,255,255,0.72);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 24px;
-      box-shadow: 0 25px 45px rgba(6,27,77,0.15);
-    }
-    .glass-nav {
-      background: rgba(255,255,255,0.78);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid rgba(226,232,240,0.7);
-      border-radius: 0 0 32px 32px;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #0A5CFF, #19D8FF);
-      color: #fff;
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 8px 24px rgba(10,92,255,0.35);
-    }
-    .btn-primary:active { transform: scale(0.96); }
-    /* ---------- TYPOGRAPHY ---------- */
-    h1 { font-size: clamp(2.4rem, 8vw, 4rem); font-weight: 800; line-height: 1.1; }
-    h2 { font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 700; }
-    .gradient-text {
-      background: linear-gradient(135deg, #0A5CFF, #19D8FF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    /* ---------- NAVIGATION ---------- */
-    header {
-      position: sticky; top: 0; z-index: 10;
-      padding: 10px 0;
-    }
-    .nav-container {
-      display: flex; justify-content: space-between; align-items: center;
-      max-width: 1200px; margin: 0 auto; padding: 0 20px;
-    }
-    .logo { font-weight: 800; font-size: 1.8rem; color: #061B4D; text-decoration: none; }
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-links a { color: #0F172A; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
-    .menu-toggle { display: none; background:none; border:none; font-size:1.8rem; color:#0F172A; }
-    /* Mobile nav */
-    @media (max-width: 768px) {
-      .nav-links { display: none; flex-direction: column; position: absolute; top:70px; right:20px;
-        background: rgba(255,255,255,0.95); backdrop-filter: blur(30px); border-radius: 24px;
-        padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); width: 200px; }
-      .nav-links.active { display: flex; }
-      .menu-toggle { display: block; }
-    }
-    /* ---------- HERO ---------- */
-    .hero { padding: 80px 0 60px; text-align: center; }
-    .hero h1 { margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; color: #475569; max-width: 600px; margin: 0 auto 30px; }
-    /* Cards */
-    .card-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px; margin: 60px 0;
-    }
-    .card { padding: 32px 24px; transition: transform 0.3s, box-shadow 0.3s; }
-    .card:hover { transform: translateY(-8px) rotateX(2deg); box-shadow: 0 30px 50px rgba(10,92,255,0.2); }
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: #061B4D; color: rgba(255,255,255,0.75); padding: 60px 0 30px;
-      margin-top: 80px; position: relative; z-index: 2;
-    }
-    .footer-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
-    }
-    footer a { color: #19D8FF; text-decoration: none; }
-    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; }
-    /* ---------- ADSENSE PLACEHOLDER ---------- */
-    .ad-placeholder { width: 100%; min-height: 90px; background: rgba(255,255,255,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); margin: 40px 0; }
-  </style>
+    </script>
 </head>
 <body>
-  <!-- 3D canvas injected by script -->
-  <canvas id="bg-canvas"></canvas>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas3d"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <div class="logo-3d">
+                    <span class="logo-icon">◈</span>
+                    <span class="logo-text">DecideFlow</span>
+                </div>
+            </a>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="/#compare" class="nav-link">Compare</a></li>
+                <li class="nav-item"><a href="/#calculators" class="nav-link">Calculators</a></li>
+                <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <a href="/#start" class="btn-primary nav-cta">Get Started</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="glass-nav">
-    <div class="nav-container">
-      <a href="/" class="logo">Decide<span style="color:#0A5CFF;">Flow</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
-      <nav class="nav-links" id="navLinks">
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="content">
-    <!-- Hero -->
-    <section class="hero">
-      <h1 class="gradient-text">Flow Through Decisions<br>With Confidence</h1>
-      <p>Unbiased software comparisons, AI tool rankings, insurance calculators — all powered by data, not opinions.</p>
-      <a href="/compare/chatgpt-vs-claude/" class="btn-primary">Start Comparing Now</a>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">                <span class="badge-pulse"></span>
+                🚀 Trusted by 10,000+ decision makers
+            </div>
+            
+            <h1 class="hero-title">
+                Flow Through Decisions<br>
+                <span class="gradient-text">With Confidence</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Make smarter choices with AI-powered comparisons, interactive calculators, 
+                and data-driven recommendations for software, insurance, and financial products.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#start" class="btn-primary btn-large">
+                    <span>Start Comparing</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="#how-it-works" class="btn-secondary btn-large">
+                    See How It Works
+                </a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Products Compared</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">% Accuracy</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <div class="card-icon">📊</div>
+                <div class="card-text">AI-Powered<br>Analysis</div>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon">✓</div>
+                <div class="card-text">Unbiased<br>Reviews</div>
+            </div>
+            <div class="floating-card card-3">                <div class="card-icon">💰</div>
+                <div class="card-text">Save 40%<br>Average</div>
+            </div>
+        </div>
     </section>
 
-    <!-- Feature Cards -->
-    <div class="card-grid">
-      <div class="card glass">
-        <h3>🔍 Smart Comparisons</h3>
-        <p style="color:#475569; margin-top:12px;">Side‑by‑side comparisons of SaaS, AI, and insurance products with real pricing.</p>
-      </div>
-      <div class="card glass">
-        <h3>🧮 Interactive Calculators</h3>
-        <p style="color:#475569; margin-top:12px;">Life insurance needs, software ROI, and more. Get numbers instantly.</p>
-      </div>
-      <div class="card glass">
-        <h3>🏆 Expert Reviews</h3>
-        <p style="color:#475569; margin-top:12px;">Hands‑on reviews written by industry professionals. No fake stars.</p>
-      </div>
-    </div>
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Do You Want to Compare?</h2>
+                <p class="section-subtitle">Choose from our comprehensive categories</p>
+            </div>
+            
+            <div class="category-grid">
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <div class="icon-bg"></div>
+                        <span>🖥️</span>
+                    </div>
+                    <h3>Enterprise Software</h3>
+                    <p>CRM, ERP, Project Management & more</p>
+                    <div class="category-count">150+ tools</div>
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <div class="icon-bg"></div>
+                        <span>🤖</span>
+                    </div>
+                    <h3>AI Tools</h3>
+                    <p>ChatGPT alternatives, writing assistants, automation</p>
+                    <div class="category-count">200+ tools</div>
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <div class="icon-bg"></div>
+                        <span>🛡️</span>
+                    </div>
+                    <h3>Insurance</h3>
+                    <p>Life, health, auto, home & business insurance</p>
+                    <div class="category-count">50+ providers</div>
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <div class="icon-bg"></div>
+                        <span>💳</span>
+                    </div>                    <h3>Financial Products</h3>
+                    <p>Credit cards, loans, investments, banking</p>
+                    <div class="category-count">100+ products</div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <!-- AdSense placeholder -->
-    <div class="ad-placeholder">📢 Ad Space (AdSense will fill this once approved)</div>
-  </main>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose DecideFlow?</h2>
+                <p class="section-subtitle">Make decisions with complete confidence</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Unbiased Comparisons</h3>
+                    <p>We don't favor any brand. Our recommendations are based purely on data, features, and real user feedback.</p>
+                    <ul class="feature-list">
+                        <li>✓ Side-by-side comparisons</li>
+                        <li>✓ Pros & cons analysis</li>
+                        <li>✓ Real user reviews</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧮</div>
+                    <h3>Smart Calculators</h3>
+                    <p>Interactive tools that calculate exactly what you need based on your specific requirements.</p>
+                    <ul class="feature-list">
+                        <li>✓ ROI calculators</li>
+                        <li>✓ Insurance needs estimator</li>
+                        <li>✓ Cost savings analyzer</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Data-Driven Insights</h3>
+                    <p>We analyze thousands of data points to give you recommendations you can trust.</p>
+                    <ul class="feature-list">
+                        <li>✓ Performance metrics</li>
+                        <li>✓ Pricing analysis</li>
+                        <li>✓ Market trends</li>
+                    </ul>
+                </div>
+                                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Transparent & Honest</h3>
+                    <p>Full disclosure of our methodology, affiliate relationships, and review process.</p>
+                    <ul class="feature-list">
+                        <li>✓ Clear methodology</li>
+                        <li>✓ Affiliate disclosure</li>
+                        <li>✓ Regular updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <h3 style="color:#fff; margin-bottom:12px;">DecideFlow</h3>
-        <p style="font-size:0.9rem;">Your decision intelligence platform.</p>
-      </div>
-      <div>
-        <h4 style="color:#fff; margin-bottom:12px;">Legal</h4>
-        <a href="/privacy-policy.html">Privacy Policy</a><br>
-        <a href="/terms-of-service.html">Terms</a><br>
-        <a href="/cookie-policy.html">Cookie Policy</a><br>
-        <a href="/affiliate-disclosure.html">Affiliate Disclosure</a><br>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-      <div>
-        <h4 style="color:#fff; margin-bottom:12px;">Contact</h4>
-        <a href="mailto:help.decideflow@zohomail.in">help.decideflow@zohomail.in</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 DecideFlow. All rights reserved. We may earn commissions from affiliate links.</p>
-    </div>
-  </footer>
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How DecideFlow Works</h2>
+                <p class="section-subtitle">Three simple steps to better decisions</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">🔍</div>
+                    <h3>Search & Compare</h3>
+                    <p>Browse our extensive database or use our smart search to find products that match your needs.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">📊</div>
+                    <h3>Analyze & Evaluate</h3>
+                    <p>Use our comparison tools, calculators, and detailed reviews to evaluate your options.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">✓</div>
+                    <h3>Decide with Confidence</h3>
+                    <p>Make your choice backed by data, expert analysis, and real user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- ===== THREE.JS 3D BACKGROUND SCRIPT (placed at end for performance) ===== -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script>
-    (function() {
-      // Basic setup
-      const canvas = document.getElementById('bg-canvas');
-      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // performance
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setClearColor(0x061B4D, 1);
+    <!-- Popular Comparisons -->
+    <section class="comparisons" id="compare">
+        <div class="container">            <div class="section-header">
+                <h2 class="section-title">Popular Comparisons</h2>
+                <p class="section-subtitle">See what others are comparing right now</p>
+            </div>
+            
+            <div class="comparison-grid">
+                <a href="#" class="comparison-card">
+                    <div class="comparison-vs">
+                        <span class="product-a">ChatGPT</span>
+                        <span class="vs">VS</span>
+                        <span class="product-b">Claude</span>
+                    </div>
+                    <div class="comparison-meta">
+                        <span class="meta-item">👁️ 15.2k views</span>
+                        <span class="meta-item">⭐ 4.8/5</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="comparison-card">
+                    <div class="comparison-vs">
+                        <span class="product-a">Salesforce</span>
+                        <span class="vs">VS</span>
+                        <span class="product-b">HubSpot</span>
+                    </div>
+                    <div class="comparison-meta">
+                        <span class="meta-item">👁️ 12.8k views</span>
+                        <span class="meta-item">⭐ 4.7/5</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="comparison-card">
+                    <div class="comparison-vs">
+                        <span class="product-a">Shopify</span>
+                        <span class="vs">VS</span>
+                        <span class="product-b">WooCommerce</span>
+                    </div>
+                    <div class="comparison-meta">
+                        <span class="meta-item">👁️ 10.5k views</span>
+                        <span class="meta-item">⭐ 4.6/5</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="comparison-card">
+                    <div class="comparison-vs">
+                        <span class="product-a">Term Life</span>
+                        <span class="vs">VS</span>
+                        <span class="product-b">Whole Life</span>
+                    </div>
+                    <div class="comparison-meta">
+                        <span class="meta-item">👁️ 8.3k views</span>                        <span class="meta-item">⭐ 4.9/5</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="btn-secondary">View All Comparisons →</a>
+            </div>
+        </div>
+    </section>
 
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.z = 30;
+    <!-- Calculators Section -->
+    <section class="calculators" id="calculators">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Decision Calculators</h2>
+                <p class="section-subtitle">Get personalized recommendations</p>
+            </div>
+            
+            <div class="calculator-grid">
+                <a href="#" class="calculator-card">
+                    <div class="calc-icon">💼</div>
+                    <h3>Software ROI Calculator</h3>
+                    <p>Calculate the return on investment for any software purchase</p>
+                    <div class="calc-cta">Try Calculator →</div>
+                </a>
+                
+                <a href="#" class="calculator-card">
+                    <div class="calc-icon">🛡️</div>
+                    <h3>Life Insurance Needs</h3>
+                    <p>Determine how much life insurance coverage you actually need</p>
+                    <div class="calc-cta">Try Calculator →</div>
+                </a>
+                
+                <a href="#" class="calculator-card">
+                    <div class="calc-icon">📊</div>
+                    <h3>Business Tool Analyzer</h3>
+                    <p>Find the perfect tools for your business size and budget</p>
+                    <div class="calc-cta">Try Calculator →</div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-      // Add ambient and point lights (not needed for basic mesh, but makes it pop)
-      const ambient = new THREE.AmbientLight(0x0A5CFF, 0.5);
-      scene.add(ambient);
-      const dirLight = new THREE.DirectionalLight(0x19D8FF, 0.8);
-      dirLight.position.set(10, 10, 10);
-      scene.add(dirLight);
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted by Decision Makers</h2>
+                <p class="section-subtitle">See what our users say</p>            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"DecideFlow saved me 15 hours of research when choosing our company's new CRM. The comparison was thorough and unbiased."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah K.</div>
+                            <div class="author-role">CTO, TechStart Inc.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"The insurance calculator helped me realize I was overpaying by $400/year. Switched providers and couldn't be happier."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <div class="author-name">Michael R.</div>
+                            <div class="author-role">Small Business Owner</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Finally, a platform that doesn't push affiliate products. The recommendations are genuinely helpful and data-driven."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JP</div>
+                        <div class="author-info">
+                            <div class="author-name">Jennifer P.</div>
+                            <div class="author-role">Marketing Director</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      // Particle system (decision nodes)
-      const particlesGeometry = new THREE.BufferGeometry();
-      const particlesCount = 300;
-      const posArray = new Float32Array(particlesCount * 3);
-      const colorArray = new Float32Array(particlesCount * 3);
-      for (let i = 0; i < particlesCount * 3; i += 3) {
-        posArray[i] = (Math.random() - 0.5) * 50;
-        posArray[i+1] = (Math.random() - 0.5) * 30;
-        posArray[i+2] = (Math.random() - 0.5) * 20;
-        // Colors: mix navy/blue/cyan
-        colorArray[i] = 0.2 + Math.random()*0.2;     // R
-        colorArray[i+1] = 0.4 + Math.random()*0.4; // G
-        colorArray[i+2] = 0.8 + Math.random()*0.2; // B
-      }
-      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-      particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
-      const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.15,
-        vertexColors: true,
-        blending: THREE.AdditiveBlending,
-        depthWrite: false
-      });
-      const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-      scene.add(particlesMesh);
+    <!-- CTA Section -->
+    <section class="cta-section" id="start">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>Ready to Make Better Decisions?</h2>
+                    <p>Join thousands of smart decision makers who trust DecideFlow</p>
+                    <div class="cta-buttons">
+                        <a href="#categories" class="btn-primary btn-large">Start Comparing Now</a>
+                        <a href="mailto:help.decideflow@zohomail.in" class="btn-text">Contact Us →</a>
+                    </div>
+                </div>
+                <div class="cta-visual">
+                    <div class="cta-orb"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      // Connecting lines (flow network)
-      const linesMaterial = new THREE.LineBasicMaterial({ color: 0x19D8FF, opacity: 0.2, transparent: true });
-      const linesGeometry = new THREE.BufferGeometry();
-      const linePositions = [];
-      for (let i = 0; i < particlesCount; i++) {
-        const idx = i * 3;
-        const x1 = posArray[idx], y1 = posArray[idx+1], z1 = posArray[idx+2];
-        // connect to nearest neighbor (or random)
-        const j = (i + 1) % particlesCount;
-        const jdx = j * 3;
-        const x2 = posArray[jdx], y2 = posArray[jdx+1], z2 = posArray[jdx+2];
-        linePositions.push(x1, y1, z1, x2, y2, z2);
-      }
-      linesGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(linePositions), 3));
-      const lines = new THREE.LineSegments(linesGeometry, linesMaterial);
-      scene.add(lines);
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">◈</span>
+                        <span class="logo-text">DecideFlow</span>
+                    </div>
+                    <p>Flow Through Decisions With Confidence</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="GitHub">⌘</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#compare">Compare</a></li>
+                        <li><a href="#calculators">Calculators</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Best Of Lists</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Software</a></li>
+                        <li><a href="#">AI Tools</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Finance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 DecideFlow. All rights reserved.</p>
+                <p class="footer-disclaimer">
+                    <strong>Disclaimer:</strong> We may earn commissions from affiliate links. 
+                    This doesn't affect our unbiased recommendations. Not financial or insurance advice.
+                </p>
+            </div>
+        </div>
+    </footer>
 
-      // Central glowing orb
-      const orbGeometry = new THREE.SphereGeometry(2.2, 32, 32);
-      const orbMaterial = new THREE.MeshStandardMaterial({
-        color: 0x0A5CFF,
-        emissive: 0x19D8FF,
-        roughness: 0.2,
-        metalness: 0.1,
-        transparent: true,
-        opacity: 0.7
-      });
-      const orb = new THREE.Mesh(orbGeometry, orbMaterial);
-      orb.position.set(0, 0, -3);
-      scene.add(orb);
-
-      // Floating rings
-      const ringGeo = new THREE.TorusGeometry(4, 0.1, 16, 100);
-      const ringMat = new THREE.MeshStandardMaterial({ color: 0x7EF9FF, emissive: 0x19D8FF, roughness:0.3, transparent:true, opacity:0.5 });
-      const ring1 = new THREE.Mesh(ringGeo, ringMat);
-      ring1.rotation.x = Math.PI/2;
-      ring1.position.set(2, 1, -5);
-      scene.add(ring1);
-      const ring2 = new THREE.Mesh(ringGeo, ringMat);
-      ring2.rotation.z = Math.PI/3;
-      ring2.position.set(-3, -1, -6);
-      scene.add(ring2);
-
-      // Animation loop
-      function animate() {
-        requestAnimationFrame(animate);
-
-        // Rotate particles and orb
-        particlesMesh.rotation.y += 0.0002;
-        particlesMesh.rotation.x += 0.0001;
-        orb.rotation.y += 0.005;
-        orb.rotation.x += 0.002;
-        ring1.rotation.z += 0.003;
-        ring1.rotation.y += 0.002;
-        ring2.rotation.x += 0.004;
-        ring2.rotation.z += 0.003;
-
-        // subtle camera movement
-        camera.position.x = Math.sin(Date.now() * 0.0001) * 1.5;
-        camera.position.y = Math.cos(Date.now() * 0.00015) * 1;
-        camera.lookAt(0, 0, -2);
-
-        renderer.render(scene, camera);
-      }
-      animate();
-
-      // Handle resize
-      window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      });
-
-      // Mobile nav toggle (outside Three.js but useful)
-      document.getElementById('menuToggle')?.addEventListener('click', () => {
-        document.getElementById('navLinks')?.classList.toggle('active');
-      });
-    })();
-  </script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
