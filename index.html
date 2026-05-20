@@ -3,172 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DecideFlow – Make Better Decisions With Data‑Driven Confidence</title>
-  <meta name="description" content="Compare software, AI tools, insurance, and financial products using unbiased analysis, intelligent calculators, and transparent recommendations.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="DecideFlow – Flow Through Decisions With Confidence">
-  <meta property="og:description" content="Unbiased comparisons, interactive calculators, and data-driven recommendations for software, AI, insurance, and finance.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://decideflow.com">
-  <meta property="og:image" content="https://decideflow.com/og-image.jpg"> <!-- Replace -->
-  <meta property="og:site_name" content="DecideFlow">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DecideFlow – Make Better Decisions With Data‑Driven Confidence">
-  <meta name="twitter:description" content="Unbiased comparisons, interactive calculators, and data-driven recommendations.">
-  <meta name="twitter:image" content="https://decideflow.com/og-image.jpg">
-  <!-- Canonical -->
-  <link rel="canonical" href="https://decideflow.com">
-  <!-- Preconnect to Google Fonts -->
+  <meta name="description" content="DecideFlow: Compare software, AI tools, insurance, and financial products with unbiased analysis, intelligent calculators, and transparent recommendations.">
+  <meta name="theme-color" content="#071A3D">
+  <title>DecideFlow | Flow Through Decisions With Confidence</title>
+  
+  <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Favicon (inline SVG) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  <!-- Manifest -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DecideFlow | Data-Driven Decision Intelligence">
+  <meta property="og:description" content="Compare software, AI tools, insurance, and financial products with unbiased analysis and transparent scoring.">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="stylesheet" href="css/style.css">
   <link rel="manifest" href="manifest.json">
-  <!-- SEO structured data -->
+  
+  <!-- JSON-LD Schemas -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "DecideFlow",
-      "url": "https://decideflow.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://decideflow.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DecideFlow",
+    "url": "https://decideflow.com",
+    "logo": "https://decideflow.com/assets/logo.svg",
+    "sameAs": [],
+    "contactPoint": {"@type": "ContactPoint", "email": "help.decideflow@zohomail.in"}
+  }
   </script>
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "DecideFlow",
-      "url": "https://decideflow.com",
-      "logo": "https://decideflow.com/logo.png",
-      "description": "Decision intelligence platform for software, AI, insurance, and financial product comparisons.",
-      "email": "help.decideflow@zohomail.in"
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DecideFlow",
+    "url": "https://decideflow.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://decideflow.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
+  }
   </script>
-</head>
-<body>
-  <!-- Skip to content for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- ========== HEADER & NAVIGATION ========== -->
-  <header class="site-header glass">
-    <div class="container nav-container">
-      <a href="#home" class="logo" aria-label="DecideFlow home">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">Decide<span class="logo-highlight">Flow</span></span>
+</head><body>
+  <!-- Navigation -->
+  <nav id="navbar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="/" class="nav-logo" aria-label="DecideFlow Home">
+        <img src="assets/logo.svg" alt="DecideFlow Logo" width="140" height="40">
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="#categories" class="nav-item">Categories</a></li>
-          <li><a href="#comparisons" class="nav-item">Comparisons</a></li>
-          <li><a href="#calculators" class="nav-item">Calculators</a></li>
-          <li><a href="#best-tools" class="nav-item">Best Tools</a></li>
-          <li><a href="#reviews" class="nav-item">Reviews</a></li>
-          <li><a href="#blog" class="nav-item">Blog</a></li>
-        </ul>
-      </nav>
-      <div class="nav-actions">
-        <button class="btn btn-ghost" id="subscribe-btn">Subscribe</button>
-        <button class="btn btn-primary" id="compare-btn">Compare Now</button>
-      </div>
-      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" id="menu-toggle">
-        <span></span><span></span><span></span>
+      <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#comparisons">Comparisons</a></li>
+        <li><a href="#calculators">Calculators</a></li>
+        <li><a href="/methodology">Methodology</a></li>
+        <li><a href="/blog">Insights</a></li>
+        <li><a href="#newsletter" class="btn-primary small">Subscribe</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#categories">Categories</a></li>
-      <li><a href="#comparisons">Comparisons</a></li>
-      <li><a href="#calculators">Calculators</a></li>
-      <li><a href="#best-tools">Best Tools</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#methodology">Methodology</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- ========== MAIN CONTENT (ROUTING VIEW) ========== -->
-  <main id="main-content">
-    <!-- All page views are injected here by JavaScript -->
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="#home" class="logo">
-          <span class="logo-icon">⚡</span> DecideFlow
-        </a>
-        <p class="footer-tagline">Flow Through Decisions With Confidence</p>
-        <div class="footer-social">
-          <!-- Placeholder icons -->
-          <a href="#" aria-label="Twitter"><span>𝕏</span></a>
-          <a href="#" aria-label="LinkedIn"><span>in</span></a>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-content tilt-card">
+        <span class="badge">v2.0 Decision Engine Online</span>
+        <h1 id="hero-heading">Make Better Decisions With Data-Driven Confidence.</h1>
+        <p class="hero-sub">Compare software, AI tools, insurance, and financial products using unbiased analysis, intelligent calculators, and transparent recommendations.</p>
+        <div class="hero-actions">
+          <a href="#categories" class="btn-primary">Compare Now</a>
+          <a href="#calculators" class="btn-secondary">Explore Tools</a>
+        </div>
+        <div class="trust-row">
+          <span class="trust-item">✓ Unbiased Research</span>
+          <span class="trust-item">✓ Transparent Methodology</span>
+          <span class="trust-item">✓ Updated Daily</span>
         </div>
       </div>
-      <div class="footer-links">
-        <h4>Platform</h4>
-        <ul>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#comparisons">Comparisons</a></li>
-          <li><a href="#calculators">Calculators</a></li>
-          <li><a href="#best-tools">Best Tools</a></li>
-        </ul>
+      <div class="hero-visual">
+        <div class="orb-glow"></div>
+        <div class="floating-panel panel-1">AI Score: 94/100</div>
+        <div class="floating-panel panel-2">ROI +212%</div>
+        <div class="floating-panel panel-3">Risk: Low</div>
       </div>
-      <div class="footer-links">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#methodology">Methodology</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    </section>
+
+    <!-- Metrics Bar -->
+    <section id="metrics" class="metrics-bar" aria-label="Platform Metrics">
+      <div class="metric"><strong>12K+</strong><span>Products Analyzed</span></div>      <div class="metric"><strong>98.4%</strong><span>Accuracy Rate</span></div>
+      <div class="metric"><strong>4.2M</strong><span>Decisions Powered</span></div>
+      <div class="metric"><strong>24h</strong><span>Data Refresh Cycle</span></div>
+    </section>
+
+    <!-- Search Interface -->
+    <section id="search" class="search-section" aria-label="Smart Search">
+      <div class="search-container">
+        <input type="text" id="smart-search" placeholder="Search tools, insurance, or financial products..." aria-label="Search DecideFlow" autocomplete="off">
+        <div id="search-suggestions" class="suggestions-box" role="listbox" hidden></div>
       </div>
-      <div class="footer-links">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#privacy">Privacy Policy</a></li>
-          <li><a href="#terms">Terms of Service</a></li>
-          <li><a href="#disclaimer">Disclaimer</a></li>
-        </ul>
+      <div class="quick-tags">
+        <span class="tag">Best CRM for Startups</span>
+        <span class="tag">ChatGPT vs Claude</span>
+        <span class="tag">Best Life Insurance India</span>
+        <span class="tag">Top Business Bank Accounts</span>
       </div>
+    </section>
+
+    <!-- Top Categories Grid -->
+    <section id="categories" class="section-pad" aria-labelledby="cat-heading">
+      <h2 id="cat-heading" class="section-title">Explore Categories</h2>
+      <div class="grid-3">
+        <article class="glass-card tilt-card"><h3>AI Tools</h3><p>Generative AI, automation, and workflow engines.</p><a href="/categories/ai" class="link-arrow">Explore →</a></article>
+        <article class="glass-card tilt-card"><h3>CRM Software</h3><p>Customer relationship management & sales ops.</p><a href="/categories/crm" class="link-arrow">Explore →</a></article>
+        <article class="glass-card tilt-card"><h3>Project Management</h3><p>Agile, Kanban, and enterprise delivery platforms.</p><a href="/categories/pm" class="link-arrow">Explore →</a></article>
+        <article class="glass-card tilt-card"><h3>Accounting</h3><p>Invoicing, bookkeeping, and financial compliance.</p><a href="/categories/accounting" class="link-arrow">Explore →</a></article>
+        <article class="glass-card tilt-card"><h3>Cybersecurity</h3><p>Endpoint protection, zero-trust, and compliance.</p><a href="/categories/security" class="link-arrow">Explore →</a></article>
+        <article class="glass-card tilt-card"><h3>Insurance</h3><p>Life, health, auto, and commercial coverage.</p><a href="/categories/insurance" class="link-arrow">Explore →</a></article>
+      </div>
+    </section>
+
+    <!-- Featured Comparisons -->
+    <section id="comparisons" class="section-pad" aria-labelledby="comp-heading">
+      <h2 id="comp-heading" class="section-title">Featured Comparisons</h2>
+      <div class="comparison-grid">
+        <div class="glass-card compare-card">
+          <div class="vs-badge">VS</div>
+          <h3>HubSpot vs Salesforce</h3>
+          <p>CRM architecture, pricing tiers, and integration depth.</p>
+          <a href="/compare/hubspot-vs-salesforce" class="btn-outline">View Breakdown</a>
+        </div>
+        <div class="glass-card compare-card">
+          <div class="vs-badge">VS</div>
+          <h3>ChatGPT vs Claude vs Gemini</h3>
+          <p>LLM reasoning, context windows, and enterprise safety.</p>
+          <a href="/compare/chatgpt-vs-claude" class="btn-outline">View Breakdown</a>
+        </div>
+        <div class="glass-card compare-card">
+          <div class="vs-badge">VS</div>          <h3>Term vs Whole Life Insurance</h3>
+          <p>Cost efficiency, cash value, and long-term liability.</p>
+          <a href="/compare/term-vs-whole-life" class="btn-outline">View Breakdown</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Calculators -->
+    <section id="calculators" class="section-pad" aria-labelledby="calc-heading">
+      <h2 id="calc-heading" class="section-title">Decision Calculators</h2>
+      <div class="calc-wrapper glass-card tilt-card">
+        <div class="calc-header">
+          <h3>SaaS ROI Calculator</h3>
+          <span class="calc-status">● Live</span>
+        </div>
+        <form id="roi-calc" class="calc-form">
+          <div class="input-group">
+            <label for="monthly-cost">Monthly Subscription ($)</label>
+            <input type="number" id="monthly-cost" placeholder="299" min="0">
+          </div>
+          <div class="input-group">
+            <label for="hours-saved">Hours Saved / Month</label>
+            <input type="number" id="hours-saved" placeholder="40" min="0">
+          </div>
+          <div class="input-group">
+            <label for="hourly-rate">Blended Hourly Rate ($)</label>
+            <input type="number" id="hourly-rate" placeholder="75" min="0">
+          </div>
+          <button type="submit" class="btn-primary full">Calculate ROI</button>
+        </form>
+        <div id="calc-result" class="calc-result hidden">
+          <div class="result-row"><span>Annual Cost</span><strong id="res-cost">$0</strong></div>
+          <div class="result-row"><span>Value Generated</span><strong id="res-value">$0</strong></div>
+          <div class="result-row highlight"><span>Net ROI</span><strong id="res-roi">0%</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology & Trust -->
+    <section id="methodology" class="section-pad" aria-labelledby="meth-heading">
+      <h2 id="meth-heading" class="section-title">Our Methodology</h2>
+      <div class="meth-grid">
+        <div class="meth-item"><span class="meth-num">01</span><h4>Independent Research</h4><p>Zero vendor influence. Data sourced from public APIs, user telemetry, and third-party audits.</p></div>
+        <div class="meth-item"><span class="meth-num">02</span><h4>Weighted Scoring</h4><p>Features (40%), Performance (25%), Pricing (20%), Support (15%). Normalized across verticals.</p></div>
+        <div class="meth-item"><span class="meth-num">03</span><h4>Transparent Rankings</h4><p>Every score is reproducible. Raw data and weighting formulas are publicly accessible.</p></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section-pad" aria-labelledby="test-heading">      <h2 id="test-heading" class="section-title">Trusted By Decision Makers</h2>
+      <div class="test-grid">
+        <blockquote class="glass-card"><p>"Cut our software procurement time by 68%. The scoring model is brutally transparent."</p><cite>— CTO, Series B SaaS</cite></blockquote>
+        <blockquote class="glass-card"><p>"Finally, an insurance comparison that doesn't feel like a sales pitch. Data-first and precise."</p><cite>— Head of Procurement, Fortune 500</cite></blockquote>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section id="newsletter" class="section-pad newsletter-section" aria-labelledby="news-heading">
+      <h2 id="news-heading">Decision Intelligence, Delivered Weekly.</h2>
+      <p>Market shifts, pricing updates, and unbiased tool rankings. No spam. Unsubscribe anytime.</p>
+      <form class="news-form" action="#" method="POST">
+        <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="final-cta" class="section-pad final-cta" aria-labelledby="final-heading">
+      <h2 id="final-heading">Ready to Decide With Confidence?</h2>
+      <a href="#categories" class="btn-primary large">Start Comparing</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>DecideFlow</h4><p>Flow Through Decisions With Confidence</p></div>
+      <div class="footer-col"><h5>Platform</h5><a href="#categories">Categories</a><a href="#comparisons">Comparisons</a><a href="#calculators">Calculators</a></div>
+      <div class="footer-col"><h5>Resources</h5><a href="/methodology">Methodology</a><a href="/blog">Blog</a><a href="/newsletter">Newsletter</a></div>
+      <div class="footer-col"><h5>Legal</h5><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 DecideFlow. All rights reserved. Unbiased research, transparent methodology.</p>
-    </div>
+    <div class="footer-bottom">© <span id="year"></span> DecideFlow. All rights reserved.</div>
   </footer>
 
-  <!-- Newsletter Modal (hidden) -->
-  <div class="modal" id="newsletter-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-content glass">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <h2 id="modal-title">Stay Ahead With Smarter Decisions</h2>
-      <p>Get our weekly data‑driven insights, tool comparisons, and exclusive deals.</p>
-      <form id="modal-newsletter-form" class="newsletter-form">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit" class="btn btn-primary">Subscribe Free</button>
-      </form>
-      <p class="privacy-note">No spam, unsubscribe anytime. Privacy policy.</p>
+  <!-- Exit Intent Modal -->
+  <div id="exit-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content glass-card">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h3 id="modal-title">Don't Leave Empty-Handed</h3>
+      <p>Get our free Decision Framework Checklist + weekly market insights.</p>
+      <input type="email" placeholder="your@email.com" aria-label="Email for checklist">
+      <button class="btn-primary full">Send Checklist</button>
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
